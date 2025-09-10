@@ -31,3 +31,47 @@
 
     audio.currentTime = (clickX / width) * duration;
   });
+
+
+/*   ZONA DE PRUEBAS NUCLEO 4
+  ADVERTENCIA: HEHCO CON CHAT GPT */
+
+const scrollWrapper = document.getElementById("scrollWrapper");
+  const thumb = document.getElementById("customThumb");
+  const scrollbar = document.querySelector(".custom-scrollbar");
+
+  function updateThumb() {
+    const ratio = scrollWrapper.scrollLeft / (scrollWrapper.scrollWidth - scrollWrapper.clientWidth);
+    const maxThumbPos = scrollbar.clientWidth - thumb.clientWidth;
+    thumb.style.left = ratio * maxThumbPos + "px";
+  }
+
+  scrollWrapper.addEventListener("scroll", updateThumb);
+
+  // Drag manual del thumb
+  let isDragging = false;
+  thumb.addEventListener("mousedown", () => isDragging = true);
+  document.addEventListener("mouseup", () => isDragging = false);
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const rect = scrollbar.getBoundingClientRect();
+    let x = e.clientX - rect.left - thumb.clientWidth / 2;
+    x = Math.max(0, Math.min(x, rect.width - thumb.clientWidth));
+    thumb.style.left = x + "px";
+    const ratio = x / (rect.width - thumb.clientWidth);
+    scrollWrapper.scrollLeft = ratio * (scrollWrapper.scrollWidth - scrollWrapper.clientWidth);
+  });
+
+  updateThumb(); // inicializa
+
+  /* TERMINA ZONA DE PRUEBAS NUCLEO 4 */
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  const container = document.querySelector('.scrollContainer');
+
+  container.scrollTo({
+    left: section.offsetLeft,
+    behavior: "smooth"
+  });
+}

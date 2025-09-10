@@ -3,12 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-      scroll-behavior: smooth;
-}
+
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Figtree", sans-serif;
     background: linear-gradient(to top, #121212 20%, #222222 100%);
     color: #ffffff;
     display: flex;
@@ -17,7 +15,45 @@ body{
     width: 100%;
 }
 
-.number{
+.scrollContainer{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    gap: 50px;
+    scrollbar-width: none; /* Firefox: oculta la scrollbar */
+}
+
+.scrollContainer::-webkit-scrollbar {
+  height: 10px;   /* ancho del scrollbar */
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: #1BD760;
+  border-radius: 5px;
+}
+
+.nucleoContainer{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra todo en la pantalla */
+    gap: 20px; /* espacio entre el círculo y el texto */
+    margin-top: 80px;
+}
+
+.number {
     font-size: 80px;
     font-weight: 900;
     display: flex;
@@ -28,36 +64,23 @@ body{
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    position: relative;
-    
-    top: 90px;
-    left: -500px;
+    flex-shrink: 0; /* evita que se achique */
+    position: static; /* 👈 importante: ya no lo muevas con relative */
 }
 
-.titleSection{
+.titleSection {
     font-size: 40px;
     font-weight: 900;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: left;
 }
 
-.titleContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /*
-    position: sticky;
-    top: 0;
-    width: 100%;
-    */
-}
 
 .cardsContainer{
     display: flex;
     gap: 90px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -86,6 +109,12 @@ body{
     height: 300px;
 }
 
+.card a{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .card img{
     width: 100%;
@@ -99,14 +128,19 @@ body{
     object-fit: cover;
 }
 
+
+
 /* Section 2 styles */
 .containerSection2{ 
+    flex: 0 0 100%;
+    scroll-snap-align: start;
     display: flex;
+    padding: 0 80px;
     align-items: center;
-    justify-content: space-between;
-    width: 75%;
-    margin-top: 300px;
-    margin-bottom: 300px;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .textSection2 {
@@ -120,7 +154,7 @@ body{
 .textSection2 h3 {
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .textSection2 p {
@@ -129,7 +163,184 @@ body{
     inline-size: 1.5;
 }
 
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+}
 
+.graficSection2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+}
+
+.graficLogo {
+    width: 85px;
+    height: 85px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.imagesContainer2 {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    place-items: center;
+}
+
+.imagesContainer2 img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.graficSection2 hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #1bd760;
+  margin: 15px 0;
+}
+
+/* Subtexto */
+.graficSection2 h5 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+.graficSection3{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    max-width: 430px;
+    height: 430px;
+}
+
+.graficSection3 > div {
+  border: 2px solid #1bd760;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.graficSection3 img {
+  width: auto;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.graficSection3 p {
+  font-size: 15px;
+}
+
+.people {
+  grid-column: span 2;
+}
+
+.imagePeole {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.imagePeole img {
+  width: auto;
+  height: 70px;
+}
+
+/* section 3 styles */
+.containerSection3{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+
+.textSection3 {
+    flex: 1;
+    max-width: 580px;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.textSection3 h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.textSection3 p {
+    font-size: 24px;
+    font-weight: 200;
+    inline-size: 1.5;
+}
+
+
+
+
+/* BARRA SCROL PRUEBAS*/
+
+.scroll-wrapper {
+    width: 100%;
+    height: 700px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox: oculta la scrollbar */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari: oculta la scrollbar */
+}
+
+.scroll-track {
+    display: flex;
+}
+
+.scroll-track img {
+    height: 100%;
+    flex-shrink: 0;
+}
+
+/* Scrollbar personalizada */
+.custom-scrollbar {
+    width: 400px; /* 👈 el ancho de la barra */
+    height: 12px;
+    background: #111;
+    border-radius: 6px;
+    margin: 30px auto; /* 👈 centrada horizontalmente */
+    position: relative;
+}
+
+.custom-thumb {
+    width: 80px; /* tamaño del pulgar */
+    height: 100%;
+    background: #1BD760;
+    border-radius: 6px;
+    position: absolute;
+    left: 0;
+    cursor: grab;
+}
+
+
+/* TERMINA ZONA DE PRUEBAS */
 
 
 
