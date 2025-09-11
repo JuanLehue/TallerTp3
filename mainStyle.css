@@ -1,204 +1,224 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
-    font-family: "Figtree", sans-serif;
-    background: linear-gradient(to top, #121212 20%, #222222 100%);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+body {
+  font-family: "Figtree", sans-serif;
+  background: linear-gradient(to top, #121212 20%, #222222 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.scrollContainer{
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    gap: 50px;
-    scrollbar-width: none; /* Firefox: oculta la scrollbar */
+.scrollContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  gap: 50px;
+  scrollbar-width: none; /* Firefox: oculta la scrollbar */
 }
 
 .scrollContainer::-webkit-scrollbar {
-  height: 10px;   /* ancho del scrollbar */
+  height: 10px; /* ancho del scrollbar */
 }
 
 .scrollContainer::-webkit-scrollbar-thumb {
-  background: #1BD760;
+  background: #1bd760;
   border-radius: 5px;
 }
 
-.nucleoContainer{
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
+.nucleoContainer {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .titleContainer {
-    display: flex;
-    align-items: center; /* centra verticalmente */
-    justify-content: center; /* centra todo en la pantalla */
-    gap: 20px; /* espacio entre el círculo y el texto */
-    margin-top: 80px;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra todo en la pantalla */
+  gap: 20px; /* espacio entre el círculo y el texto */
+  margin-top: 60px;
 }
 
 .number {
-    font-size: 80px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    background-color: #1BD760;
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    flex-shrink: 0; /* evita que se achique */
-    position: static; /* 👈 importante: ya no lo muevas con relative */
+  font-size: 80px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #1bd760;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  flex-shrink: 0; /* evita que se achique */
+  position: static; /* 👈 importante: ya no lo muevas con relative */
 }
 
 .titleSection {
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 1.2;
-    text-align: left;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
 }
 
-
-.cardsContainer{
-    display: flex;
-    gap: 90px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
+.cardsContainer {
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
-.cardsContainer2{
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.cardsContainer2 {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.card{
-    width: 380px;
-    height: 380px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+.card {
+  width: 380px;
+  height: 380px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-.card2{
-    width: 300px;
-    height: 300px;
+.card2 {
+  width: 300px;
+  height: 300px;
 }
 
-.card a{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card a {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card img:hover {
+  box-shadow: 0 2px 8px #1bd600;
+  transition: all 0.3s ease;
 }
 
-
+.card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Section 2 styles */
-.containerSection2{ 
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    display: flex;
-    padding: 0 80px;
-    align-items: center;
-    justify-content: center;
-    gap: 90px;
-    margin-top: 100px;
-    margin-bottom: 200px;
+
+.scrollContainer2 {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  gap: 50px;
+  scrollbar-width: none; /* Firefox: oculta la scrollbar */
+}
+
+.scrollContainer2::-webkit-scrollbar {
+  height: 10px; /* ancho del scrollbar */
+}
+
+.scrollContainer2::-webkit-scrollbar-thumb {
+  background: #1bd760;
+  border-radius: 5px;
+}
+.containerSection2 {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  padding: 0 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 .textSection2 {
-    flex: 1;
-    max-width: 580px;
-    padding-right: 20px;
-    font-size: 24px;
-    font-weight: 600;
+  flex: 1;
+  max-width: 580px;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .textSection2 h3 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
 
 .textSection2 p {
-    font-size: 24px;
-    font-weight: 200;
-    inline-size: 1.5;
+  font-size: 24px;
+  font-weight: 200;
+  inline-size: 1.5;
 }
 
-.description{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    flex-direction: column;
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .graficSection2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 280px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 280px;
 }
 
 .graficLogo {
-    width: 85px;
-    height: 85px;
-    padding: 10px;
-    margin-bottom: 20px;
+  width: 85px;
+  height: 85px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .imagesContainer2 {
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    grid-gap: 15px;
-    margin-bottom: 15px;
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-gap: 5px;
+  margin-bottom: 15px;
+  place-items: center;
 }
 
 .imagesContainer2 img {
   width: 130px;
   height: 130px;
   object-fit: cover;
+  margin: 5px;
 }
 
 .graficSection2 hr {
@@ -216,13 +236,13 @@ body{
   max-width: 280px;
 }
 
-.graficSection3{
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    max-width: 430px;
-    height: 430px;
+.graficSection3 {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  max-width: 430px;
+  height: 430px;
 }
 
 .graficSection3 > div {
@@ -262,208 +282,346 @@ body{
   height: 70px;
 }
 
+/*LINEA DEL TIEMPO*/
+.timelineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: visible; /* importante para que tooltips no se corten */
+}
+
+.timeline {
+  position: relative;
+  width: 100%; /* ocupa todo el ancho de la sección */
+  max-width: 1200px; /* opcional, limita tamaño máximo */
+}
+
+/* Línea base */
+.timeline-line {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #444;
+  z-index: 1;
+}
+
+/* Línea de progreso */
+.timeline-progress {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: limegreen;
+  z-index: 2;
+  transition: width 0.5s ease;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* ocupa el ancho de la sección */
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* los pasos se reparten equitativamente */
+  gap: 0; /* no hace falta scroll interno */
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.step p {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  user-select: none;
+}
+
+/* Fondo de cada paso */
+.step .icon {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover solo en pasos no vistos */
+.step:not(.completed):hover .icon {
+  filter: drop-shadow(0 0 10px limegreen);
+}
+
+.step.active,
+.step.completed {
+  opacity: 1;
+}
+
+/* Puntos debajo de cada icono */
+.step::after {
+  content: "";
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #444;
+  z-index: 2;
+  transition: background 0.5s ease;
+}
+
+.step.active::after,
+.step.completed::after {
+  background: limegreen;
+}
+
+/* Cuadros de texto */
+.info {
+  position: absolute;
+  top: 310px;
+  max-width: 300px;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 25px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  transition: left 0.5s ease; /* animar solo la posición horizontal */
+}
+
+.info.active {
+  display: block;
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* justo arriba del cuadro */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px; /* tamaño de la flecha */
+  border-style: solid;
+  border-color: transparent transparent #fff transparent; /* solo la punta inferior blanca */
+}
+
 /* section 3 styles */
-.containerSection3{ 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 75%;
-    margin-top: 300px;
-    margin-bottom: 300px;
+.containerSection3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 300px;
+  margin-bottom: 300px;
 }
 
 .textSection3 {
-    flex: 1;
-    max-width: 580px;
-    padding-left: 20px;
-    font-size: 24px;
-    font-weight: 600;
+  flex: 1;
+  max-width: 580px;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .textSection3 h3 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .textSection3 p {
-    font-size: 24px;
-    font-weight: 200;
-    inline-size: 1.5;
+  font-size: 24px;
+  font-weight: 200;
+  inline-size: 1.5;
 }
-
-
-
 
 /* BARRA SCROL PRUEBAS*/
 
 .scroll-wrapper {
-    width: 100%;
-    height: 700px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scrollbar-width: none; /* Firefox: oculta la scrollbar */
+  width: 100%;
+  height: 700px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox: oculta la scrollbar */
 }
 
 .scroll-wrapper::-webkit-scrollbar {
-    display: none; /* Chrome/Safari: oculta la scrollbar */
+  display: none; /* Chrome/Safari: oculta la scrollbar */
 }
 
 .scroll-track {
-    display: flex;
+  display: flex;
 }
 
 .scroll-track img {
-    height: 100%;
-    flex-shrink: 0;
+  height: 100%;
+  flex-shrink: 0;
 }
 
 /* Scrollbar personalizada */
 .custom-scrollbar {
-    width: 400px; /* 👈 el ancho de la barra */
-    height: 12px;
-    background: #111;
-    border-radius: 6px;
-    margin: 30px auto; /* 👈 centrada horizontalmente */
-    position: relative;
+  width: 400px; /* 👈 el ancho de la barra */
+  height: 12px;
+  background: #111;
+  border-radius: 6px;
+  margin: 30px auto; /* 👈 centrada horizontalmente */
+  position: relative;
 }
 
 .custom-thumb {
-    width: 80px; /* tamaño del pulgar */
-    height: 100%;
-    background: #1BD760;
-    border-radius: 6px;
-    position: absolute;
-    left: 0;
-    cursor: grab;
+  width: 80px; /* tamaño del pulgar */
+  height: 100%;
+  background: #1bd760;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  cursor: grab;
 }
-
 
 /* TERMINA ZONA DE PRUEBAS */
 
-
-
-
-
 /* Music display section */
 .musicDisplay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background: #000;
-    border-radius: 15px;
-    padding: 30px 40px 20px 40px;
-    width: 1300px;
-    margin-top: 40px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-    position: fixed;
-    bottom: 30px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  border-radius: 15px;
+  padding: 30px 40px 20px 40px;
+  width: 1300px;
+  margin-top: 40px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 30px;
+  gap: 20px;
 }
 
 .albumCover {
-    width: 60px;
-    height: 60px;
-    background: #ccc;
-    border-radius: 8px;
-    margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 
-.musicPlayer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+.musicPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .songInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
 }
 .songInfo h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
 }
 .songInfo p {
-    font-size: 14px;
-    color: #b3b3b3;
-    margin: 0;
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0;
 }
 .playButton {
-    width: 80px;
-    height: 80px;
-    background: #1BD760;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: #1bd760;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-
-.nextIcon, .prevIcon {
-    height: 35px;
-    width: auto;
-    background: none;
-    color: #fff;
-    font-size: 24px;
-    justify-self: center;
-    align-self: center;
+.nextIcon,
+.prevIcon {
+  height: 35px;
+  width: auto;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  justify-self: center;
+  align-self: center;
 }
 
-.nextIcon{
-    transform: translateX(50px);
+.nextIcon {
+  transform: translateX(50px);
 }
 
-.prevIcon{
-    transform: translateX(-50px);
+.prevIcon {
+  transform: translateX(-50px);
 }
-    
+
 .playIcon {
-    height: 35px;
-    width: auto;
-    background: none;
-    color: #222;
-    font-size: 24px;
-    justify-self: center;
-    align-self: center;
+  height: 35px;
+  width: auto;
+  background: none;
+  color: #222;
+  font-size: 24px;
+  justify-self: center;
+  align-self: center;
 }
 
-.playIcon img{
-    width: 35px;
-    height: 35px;
-    padding-left: 5px;
+.playIcon img {
+  width: 35px;
+  height: 35px;
+  padding-left: 5px;
 }
 
 /* Progress bar below music display */
 .progressBar {
-    height: 6px;
-    width: 80%;
-    background: #4D4D4D;
-    border-radius: 3px;
-    margin: 20px auto 0 auto;
-    position: static;
-    display: block;
+  height: 6px;
+  width: 80%;
+  background: #4d4d4d;
+  border-radius: 3px;
+  margin: 20px auto 0 auto;
+  position: static;
+  display: block;
 }
 .progress {
-    height: 100%;
-    width: 0%; /* Change with JS for progress */
-    background: #1ed760;
-    border-radius: 3px;
-    transition: width 0.3s;
+  height: 100%;
+  width: 0%; /* Change with JS for progress */
+  background: #1ed760;
+  border-radius: 3px;
+  transition: width 0.3s;
 }
 .menuIcon {
-    margin-left: 20px;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
 }

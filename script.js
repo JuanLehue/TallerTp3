@@ -75,3 +75,52 @@ function scrollToSection(id) {
     behavior: "smooth"
   });
 }
+
+/* LINEA DEL TIEMPO */
+const steps = document.querySelectorAll(".step");
+const progress = document.querySelector(".timeline-progress");
+const infoBox = document.getElementById("info-box");
+
+// Todos los textos en un array
+const textos = [
+  "Spotify registra todas las interacciones de los usuarios: canciones reproducidas, saltadas, añadidas a playlists, tiempo de escucha, etc.",
+  "Examina esos datos de comportamiento para identificar patrones (qué géneros escuchas más, a qué hora, qué tanto repetís una canción, etc.).",
+  "Contrasta tu comportamiento con el de millones de otros usuarios para detectar similitudes y crear conexiones entre perfiles",
+  "Descompone cada canción: \n -Datos en bruto (ritmo, tempo, energía, tonalidad) \n -Información externa (reseñas, etiquetas de género, descripciones en internet, metadatos de artistas) \n Así las organiza en “categorías” que el algoritmo puede usar.",
+  "Con todo lo anterior, genera un perfil musical único para cada usuario y produce recomendaciones personalizadas (playlists automáticas, “Discover Weekly”, etc.).",
+];
+
+// Posicionar y actualizar cuadro dinámico
+function mostrarInfo(index) {
+  // Actualizar texto
+  infoBox.querySelector("p").textContent = textos[index];
+
+    const step = steps[index];
+  const timelineRect = document.querySelector(".timeline").getBoundingClientRect();
+  const stepRect = step.getBoundingClientRect();
+
+  const endX = stepRect.left - timelineRect.left + stepRect.width / 2;
+
+  progress.style.width = endX + "px";
+  infoBox.style.left = endX + "px";
+  infoBox.style.transform = "translateX(-50%)";
+}
+
+// Manejar clicks en los pasos
+steps.forEach((step, index) => {
+  step.addEventListener("click", () => {
+    steps.forEach((s) => s.classList.remove("active", "completed"));
+    steps.forEach((s, i) => {
+      if (i < index) s.classList.add("completed");
+      else if (i === index) s.classList.add("active");
+    });
+
+    const progressWidth = (index / (steps.length - 1)) * 100;
+    progress.style.width = progressWidth + "%";
+
+    mostrarInfo(index);
+  });
+});
+
+// Posición inicial
+mostrarInfo(0);
