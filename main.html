@@ -1,436 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="mainStyle.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!--Nucleo 1-->
-    <div class="titleContainer">
-      <div class="number">1</div>
-      <div class="titleSection">Sistemas de recomendación</div>
-    </div>
-    <div class="scrollContainer">
-      <div class="nucleoContainer">
-        <div class="cardsContainer">
-          <div class="card">
-            <img
-              src="images/sistRecom.png"
-              alt="Imagen que son?"
-              onclick="scrollToSection('seccion1')"
-            />
-          </div>
-          <div class="card">
-            <img
-              src="images/paraQue.png"
-              alt="Imagen para que se usan?"
-              onclick="scrollToSection('seccion2')"
-            />
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="mainStyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+</head>
 
-      <!--Nucleo 1 Section 1-->
-      <div class="containerSection2 seccion" id="seccion1">
-        <div class="textSection2">
-          <h3>¿Qué es un sistema de recomendación?</h3>
-          <div class="description">
-            <p>
-              Es un conjunto de herramientas de software diseñadas para
-              personalizar las recomendaciones dentro del mundo digital.
-            </p>
-            <p>
-              Estos aparecen tanto a la hora de buscar un producto online, como
-              una película en tu servicio favorito de streaming.
-            </p>
-          </div>
+<body>
+  <!--Nucleo 1-->
+  <div class="titleContainer" onclick="scrollToSection('seccion0')">
+    <div class="number">1</div>
+    <div class="titleSection">Sistemas de recomendación</div>
+  </div>
+
+  </div>
+  <div class="scrollContainer" id="seccion0">
+    <div class="nucleoContainer">
+      <div class="cardsContainer">
+        <div class="card">
+          <img src="images/sistRecom.png" alt="Imagen que son?" onclick="scrollToSection('seccion1')" />
         </div>
-        <div class="graficSection2">
-          <img
-            class="graficLogo"
-            src="images/userLogo.png"
-            alt="logo de usuario"
-          />
-          <div class="imagesContainer2">
-            <img src="images/duaLipa.png" alt="imagen de Dua Lipa" />
-            <img src="images/jennie.png" alt="imagen de Jennie" />
-            <img src="images/badbunny.png" alt="imagen de Bad Bunny" />
-            <img src="images/postMalone.png" alt="imagen de Post Malone" />
-          </div>
-          <hr />
-          <h5>
-            El Sistema de Recomendación de Spotify se alimenta de tus
-            interacciones, qué canciones pausas, repetís, etc
-          </h5>
-        </div>
-        <div class="graficSection2">
-          <img
-            class="graficLogo"
-            src="images/logoSpotify.png"
-            alt="logo de spotify"
-          />
-          <div class="imagesContainer2">
-            <img
-              src="images/descSemanal.png"
-              alt="imagen de Descubrimiento semanal"
-            />
-            <img src="images/radar.png" alt="imagen de Radar de novedades" />
-            <img src="images/mix1.png" alt="imagen de Mix diario 1" />
-            <img src="images/mix2.png" alt="imagen de Mix diario 2" />
-          </div>
-          <hr />
-          <h5>
-            En base a tus interacciones, Spotify puede conocer más sobre tus
-            gustos y recomendarte música.
-          </h5>
-        </div>
-      </div>
-      <!--Nucleo 1 Section 2-->
-      <div class="containerSection2 seccion" id="seccion2">
-        <div class="textSection2">
-          <h3>¿Para qué se usan?</h3>
-          <div class="description">
-            <p>
-              Son los encargados de acercar al usuario a los productos ideales
-              para consumir o comprar.
-            </p>
-            <p>
-              Son necesarios debido a la sobresaturación de contenido que existe
-              hoy en día.
-            </p>
-            <p>
-              Para que te hagas una idea, a principios de 2024 se registraron
-              más de 100 millones de canciones en Spotify.
-            </p>
-          </div>
-        </div>
-        <div class="graficSection3">
-          <div class="human">
-            <img src="images/man.png" alt="logo de persona" />
-            <p>Un humano promedio vive aproximadamente 80 años</p>
-          </div>
-          <div class="head">
-            <img src="images/head.png" alt="logo de auriculares" />
-            <p>
-              En promedio, una canción dura aproximadamente 3 minutos y 17
-              segundos
-            </p>
-          </div>
-          <div class="people">
-            <div class="imagePeole">
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-              <img src="images/man2.png" alt="logo de persona" />
-            </div>
-            <p>Se requerirían 8 vidas para esuchar todo Spotify</p>
-          </div>
+        <div class="card">
+          <img src="images/paraQue.png" alt="Imagen para que se usan?" onclick="scrollToSection('seccion2')" />
         </div>
       </div>
     </div>
-    <!--Nucleo 2-->
-    <div class="titleContainer">
-      <div class="number">2</div>
-      <div class="titleSection">Machine Learning</div>
-    </div>
-    <div class="scrollContainer2">
-      <div class="nucleoContainer">
-        <div class="cardsContainer">
-          <div class="card">
-            <img
-              src="images/machineQue.png"
-              alt="imagen que es el machine learning"
-            />
-          </div>
-          <div class="card">
-            <img
-              src="images/machineComo.png"
-              alt="imagen como funciona el machine learning"
-            />
-          </div>
-          <div class="card">
-            <img
-              src="images/machineUtiliza.png"
-              alt="imagen como utiliza el machine learning Spotify"
-            />
-          </div>
-        </div>
-      </div>
-      <!--Nucleo 2 Section 1-->
-      <div class="containerSection2">
-        <div class="textSection2">
-          <h3>¿Qué es?</h3>
+
+    <!--Nucleo 1 Section 1-->
+    <div class="containerSection2 seccion" id="seccion1">
+      <div class="textSection2">
+        <h3>¿Qué es un sistema de recomendación?</h3>
+        <div class="description">
           <p>
-            El Machine Learning, una rama de la inteligencia artificial que
-            permite a los sistemas aprender de los datos y detectar patrones
-            para predecir comportamientos sin programación explícita. Dentro de
-            esta, Spotify emplea Deep Learning, que utiliza redes neuronales
-            artificiales inspiradas en el cerebro humano, lo que le permite
-            “aprender” de manera similar al razonamiento humano y ofrecer
-            recomendaciones cada vez más precisas y adaptadas a los gustos de
-            cada oyente. Las redes neuronales, o redes neuronales artificiales,
-            intentan imitar el cerebro humano a través de una combinación de
-            entradas de datos, ponderaciones y sesgos, todos actuando como
-            neuronas de silicio. Estos elementos trabajan juntos para reconocer,
-            clasificar y describir con precisión los objetos dentro de los
-            datos.
+            Es un conjunto de herramientas de software diseñadas para
+            personalizar las recomendaciones dentro del mundo digital.
+          </p>
+          <p>
+            Estos aparecen tanto a la hora de buscar un producto online, como
+            una película en tu servicio favorito de streaming.
           </p>
         </div>
-        <img src="images/blank.png" alt="" />
       </div>
-      <!--Nucleo 2 Section 2-->
-      <div class="containerSection2">
-        <div class="textSection2">
-          <h3>¿Cómo funciona?</h3>
+      <div class="graficSection2">
+        <img class="graficLogo" src="images/userLogo.png" alt="logo de usuario" />
+        <div class="imagesContainer2">
+          <img src="images/duaLipa.png" alt="imagen de Dua Lipa" />
+          <img src="images/jennie.png" alt="imagen de Jennie" />
+          <img src="images/badbunny.png" alt="imagen de Bad Bunny" />
+          <img src="images/postMalone.png" alt="imagen de Post Malone" />
+        </div>
+        <hr />
+        <h5 class="textBox">
+          El Sistema de Recomendación de Spotify se alimenta de tus
+          interacciones, qué canciones pausas, repetís, etc
+        </h5>
+      </div>
+      <div class="graficSection2">
+        <img class="graficLogo" src="images/logoSpotify.png" alt="logo de spotify" />
+        <div class="imagesContainer2">
+          <img src="images/descSemanal.png" alt="imagen de Descubrimiento semanal" />
+          <img src="images/radar.png" alt="imagen de Radar de novedades" />
+          <img src="images/mix1.png" alt="imagen de Mix diario 1" />
+          <img src="images/mix2.png" alt="imagen de Mix diario 2" />
+        </div>
+        <hr />
+        <h5 class="textBox">
+          En base a tus interacciones, Spotify puede conocer más sobre tus
+          gustos y recomendarte música.
+        </h5>
+      </div>
+    </div>
+    <!--Nucleo 1 Section 2-->
+    <div class="containerSection2 seccion" id="seccion2">
+      <div class="textSection2">
+        <h3>¿Para qué se usan?</h3>
+        <div class="description">
           <p>
-            Spotify analiza y revisa las pistas de audio sin procesar, es decir,
-            en bruto para poder clasificarlas dentro de sus categorías. Esta
-            revisión permite poder observar las similitudes entre las canciones
-            y por tanto, recomendarlas a los usuarios según su propio historial.
+            Son los encargados de acercar al usuario a los productos ideales
+            para consumir o comprar.
+          </p>
+          <p>
+            Son necesarios debido a la sobresaturación de contenido que existe
+            hoy en día.
+          </p>
+          <p>
+            Para que te hagas una idea, a principios de 2024 se registraron
+            más de 100 millones de canciones en Spotify.
           </p>
         </div>
-        <img src="images/blank.png" alt="" />
       </div>
-      <!--Nucleo 2 Section 3-->
-      <div class="containerSection2">
-        <div class="timeline">
-          <div class="timeline-line"></div>
-          <div class="timeline-progress"></div>
-          <div class="stepsContainer">
-            <div class="steps">
-              <div class="step active" data-step="1">
-                <div
-                  class="icon"
-                  style="background-image: url('images/recopila.png')"
-                ></div>
-                <p>Recopila</p>
-              </div>
-              <div class="step" data-step="2">
-                <div
-                  class="icon"
-                  style="background-image: url('images/analiza.png')"
-                ></div>
-                <p>Analiza</p>
-              </div>
-              <div class="step" data-step="3">
-                <div
-                  class="icon"
-                  style="background-image: url('images/compara.png')"
-                ></div>
-                <p>Compara</p>
-              </div>
-              <div class="step" data-step="4">
-                <div
-                  class="icon"
-                  style="background-image: url('images/clasifica.png')"
-                ></div>
-                <p>Clasifica</p>
-              </div>
-              <div class="step" data-step="5">
-                <div
-                  class="icon"
-                  style="background-image: url('images/crea.png')"
-                ></div>
-                <p>Crea</p>
-              </div>
+      <div class="graficSection3">
+        <div class="human">
+          <img src="images/man.png" alt="logo de persona" />
+          <p>Un humano promedio vive aproximadamente 80 años</p>
+        </div>
+        <div class="head">
+          <img src="images/head.png" alt="logo de auriculares" />
+          <p>
+            En promedio, una canción dura aproximadamente 3 minutos y 17
+            segundos
+          </p>
+        </div>
+        <div class="people">
+          <div class="imagePeole">
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+            <img src="images/man2.png" alt="logo de persona" />
+          </div>
+          <p>Se requerirían 8 vidas para esuchar todo Spotify</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Nucleo 2-->
+  <div class="titleContainer" onclick="scrollToSectionMachine('containerMachineSection0')">
+    <div class="number">2</div>
+    <div class="titleSection">Machine Learning</div>
+  </div>
+  <div class="scrollContainer2 scrollContainerMachine" id="containerMachineSection0">
+    <div class="nucleoContainer">
+      <div class="cardsContainer">
+        <div class="card" onclick="scrollToSectionMachine('containerMachineSection1')">
+          <img src="images/machineQue.png" alt="imagen que es el machine learning" />
+        </div>
+        <div class="card" onclick="scrollToSectionMachine('containerMachineSection2')">
+          <img src="images/machineComo.png" alt="imagen como funciona el machine learning" />
+        </div>
+        <div class="card" onclick="scrollToSectionMachine('containerMachineSection3')">
+          <img src="images/machineUtiliza.png" alt="imagen como utiliza el machine learning Spotify" />
+        </div>
+      </div>
+    </div>
+    <!--Nucleo 2 Section 1-->
+    <div class="containerSplitSection2" id="containerMachineSection1">
+      <div class="halfImage left">
+        <img src="images/split.png" alt="Imagen compartida">
+      </div>
+      <div class="textSplitSection2 textSRight">
+        <h3>¿Qué es?</h3>
+        <div class="description">
+          <p>
+            El Machine Learning es una rama de la inteligencia artificial que permite a los sistemas aprender de los
+            datos y predecir comportamientos sin ser programados de forma explícita.
+          </p>
+          <p>
+            Spotify aplica Deep Learning, una técnica basada en redes neuronales inspiradas en el cerebro humano, para
+            mejorar sus recomendaciones musicales y adaptarlas a cada oyente.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Nucleo 2 Section 2-->
+    <div class="containerSplitSection2" id="containerMachineSection2">
+      <div class="textSplitSection2 textSLeft">
+        <h3>¿Cómo funciona?</h3>
+        <div class="description">
+          <p>
+            Las redes neuronales artificiales imitan el funcionamiento del cerebro humano usando datos, ponderaciones y
+            sesgos que actúan como “neuronas digitales”.
+          </p>
+          <p>
+            Al trabajar en conjunto, permiten reconocer, clasificar y describir patrones u objetos dentro de grandes
+            volúmenes de información.
+          </p>
+        </div>
+      </div>
+      <div class="halfImage right">
+        <img src="images/split.png" alt="Imagen compartida">
+      </div>
+    </div>
+    <!--Nucleo 2 Section 3-->
+    <div class="containerSection2" id="containerMachineSection3">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-progress"></div>
+        <div class="stepsContainer">
+          <div class="steps">
+            <div class="step active" data-step="1">
+              <div class="icon" style="background-image: url('images/recopila.png')"></div>
+              <p>Recopila</p>
+            </div>
+            <div class="step" data-step="2">
+              <div class="icon" style="background-image: url('images/analiza.png')"></div>
+              <p>Analiza</p>
+            </div>
+            <div class="step" data-step="3">
+              <div class="icon" style="background-image: url('images/compara.png')"></div>
+              <p>Compara</p>
+            </div>
+            <div class="step" data-step="4">
+              <div class="icon" style="background-image: url('images/clasifica.png')"></div>
+              <p>Clasifica</p>
+            </div>
+            <div class="step" data-step="5">
+              <div class="icon" style="background-image: url('images/crea.png')"></div>
+              <p>Crea</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textos -->
+        <!-- Un solo cuadro de texto -->
+        <div id="info-box" class="info active">
+          <p>
+            Spotify registra todas las interacciones de los usuarios: canciones reproducidas, saltadas, añadidas a
+            playlists, tiempo de escucha, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- ZONA CARRUSEL 3 FUNCIONA -->
+  <div class="titleContainer" onclick="scrollToSection2('containerSection3p0')">
+    <div class="number">3</div>
+    <div class="titleSection">
+      Pero, ¿qué datos utiliza Spotify?
+    </div>
+  </div>
+  <!-- Carrusel personalizado -->
+  <div class="custom-carousel" id="carousel">
+
+    <!-- Slide 0: el cardsContainer2 -->
+    <div class="carousel-slide" data-id="0">
+
+      <div class="grid-container" id="containerSection3p0">
+        <div class="media-container" onclick="scrollToSection2('containerSection3p1')">
+          <img src="images/PLN.png" alt="PLN" class="media-image">
+          <video src="images/Video1.mp4" class="media-video" muted loop></video>
+        </div>
+        <div class="media-container" onclick="scrollToSection2('containerSection3p2')">
+          <img src="images/AUSP.png" alt="Audio" class="media-image">
+          <video src="images/Video2.mp4" class="media-video" muted loop></video>
+        </div>
+        <div class="media-container" onclick="scrollToSection2('containerSection3p3')">
+          <img src="images/FC.png" alt="Filtrado" class="media-image">
+          <video src="images/Video3.mp4" class="media-video" muted loop></video>
+        </div>
+        <div class="media-container" onclick="scrollToSection2('containerSection3p4')">
+          <img src="images/FEI.png" alt="Feedback" class="media-image">
+          <video src="images/Video4.mp4" class="media-video" muted loop></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="carousel-slide" data-id="" id="containerSection3p1">
+      <div class="containerSection3">
+        <div class="textSection3">
+          <h3>Procesamiento de lenguaje natural (PLN)</h3>
+          <p>
+            El Procesamiento de Lenguaje Natural (PLN) permite al sistema analizar grandes volúmenes de
+            texto no estructurado de reseñas, redes sociales o blogs.
+            <br><br>
+            Sus aplicaciones incluyen el análisis de sentimiento (positivo, negativo o neutral), la
+            extracción de temas clave y la detección de entidades como marcas o lugares.
+            <br><br>
+            Así, convierte opiniones en datos útiles para comprender percepciones y apoyar decisiones.
+          </p>
+        </div>
+        <img class="imagenS1" src="images/cartaCerebro.png" alt="">
+      </div>
+    </div>
+
+
+
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide" data-id="" id="containerSection3p2">
+      <div class="containerSection3">
+        <div class="textSection3">
+          <h3>Análisis de audio sin procesar</h3>
+          <p>
+            El análisis de audio sin procesar utiliza redes neuronales profundas para extraer directamente
+            características musicales como ritmo, tonalidad e instrumentación desde las ondas sonoras.
+            <br><br>
+            Esto permite generar descripciones automáticas, clasificar géneros con precisión y mejorar
+            aplicaciones como recomendadores musicales y análisis de audio.
+          </p>
+        </div>
+        <img src="images/spoty code.png" alt="">
+      </div>
+    </div>
+
+
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide" data-id="" id="containerSection3p3">
+      <div class="containerSection3">
+        <div class="textSection3">
+          <h3>La aplicación clasifica las acciones del usuario en dos categorías:</h3>
+          <p>
+            Feedback implícito: Aquellas acciones involuntarias medidas previamente por la aplicación,
+            como contenido escuchado, tiempo de escucha, repeticiones, saltos, etc.
+          </p>
+          <p>
+            Feedback explícito: Aquellas acciones voluntarias del usuario como dar “Me gusta”, seguir a
+            otros usuarios o creadores, y guardar contenido.
+          </p>
+        </div>
+        <!-- mini carrusel -->
+        <div class="mini-carousel">
+          <div class="mini-carousel-track">
+            <div class="mini-item">
+              <img src="images/tyller el creador.png" alt="Canción 1">
+              <h4>Ring Ring Ring</h4>
+              <p>Tyler, the Creator</p>
+            </div>
+            <div class="mini-item">
+              <img src="images/border.jpeg" alt="Canción 2">
+              <h4>Borderline</h4>
+              <p>Tame Impala</p>
+            </div>
+            <div class="mini-item">
+              <img src="images/chicabyn.jpeg" alt="Canción 3">
+              <h4>Parachute</h4>
+              <p>Halley Williams</p>
             </div>
           </div>
 
-          <!-- Textos -->
-          <!-- Un solo cuadro de texto -->
-          <div id="info-box" class="info active">
-            <p>
-              Spotify registra todas las interacciones de los usuarios: canciones reproducidas, saltadas, añadidas a playlists, tiempo de escucha, etc.
-            </p>
+          <!-- Controles -->
+          <div class="mini-controls">
+            <button class="mini-prev"><img src="images/skipLeft.png" alt=""></button>
+            <button class="mini-skip"><img src="images/skipBoton.png" alt=""></button>
+            <button class="mini-next"><img src="images/skipRight.png" alt=""></button>
           </div>
         </div>
+        <!-- fin mini carrusel -->
       </div>
+
+
+
     </div>
 
-    <!--Nucleo 3-->
-    <div class="titleContainer">
-      <div class="number">3</div>
-      <div class="titleSection">Pero, ¿qué datos utiliza Spotify?</div>
-    </div>
-    <div class="cardsContainer2">
-      <div class="card2">
-        <img src="images/PNL.png" alt="imagen que es el PNL" />
-      </div>
-      <div class="card2">
-        <img
-          src="images/analisisAudio.png"
-          alt="imagen analisis de audio sin procesar"
-        />
-      </div>
-      <div class="card2">
-        <img
-          src="images/feedback.png"
-          alt="imagen de feedback explícito e implícito"
-        />
-      </div>
-      <div class="card2">
-        <img
-          src="images/filtradoColab.png"
-          alt="imagen de filtrado colaborativo"
-        />
-      </div>
-    </div>
-    <!--Nucleo 3 section 1-->
-    <div class="containerSection3">
-      <div class="textSection3">
-        <h3>Procesamiento de lenguaje natural (PLN)</h3>
-        <p>
-          Permite analizar grandes volúmenes de texto no estructurado
-          proveniente de fuentes como reseñas, blogs y redes sociales. Esta
-          tecnología facilita la comprensión automática d el lenguaje humano por
-          parte de las máquinas. Una de sus aplicaciones más comunes es el
-          análisis de sentimiento, que identifica si una opinión es positiva,
-          negativa o neutral. También se utiliza para extraer temas clave o
-          aspectos mencionados, como la calidad de un producto o el servicio
-          recibido. Además, puede detectar entidades como marcas o lugares
-          mencionados en el texto. Estas capacidades permiten conocer la
-          percepción pública sobre productos, servicios o tendencias. En
-          conjunto, el PLN convierte opiniones subjetivas en datos útiles para
-          la toma de decisiones
-        </p>
-      </div>
-      <img src="images/blank.png" alt="" />
-    </div>
 
-    <!--Nucleo 3 section 2-->
-    <div class="containerSection3">
-      <div class="textSection3">
-        <h3>Análisis de audio sin procesar</h3>
-        <p>
-          El análisis de audio sin procesar permite extraer características
-          musicales directamente desde las ondas sonoras, sin necesidad de
-          preprocesamiento manual. A través de redes neuronales profundas, se
-          identifican rasgos como el ritmo, la tonalidad y la instrumentación de
-          una pieza musical. Este enfoque aprovecha la capacidad de las redes
-          para aprender patrones complejos en datos crudos. Gracias a esto, se
-          pueden generar descripciones automáticas de música o clasificar
-          géneros musicales con alta precisión. Es una técnica clave en
-          aplicaciones como recomendadores musicales y análisis automatizado de
-          audio.
-        </p>
+    <!-- Slide 4 -->
+    <div class="carousel-slide" data-id="" id="containerSection3p4">
+      <div class="containerSection3">
+        <div class="textSection3">
+          <h3>Filtrado colaborativo</h3>
+          <p>
+            Spotify usa filtrado colaborativo para recomendar música basándose en la relación entre usuarios y sus
+            hábitos de escucha.
+          </p>
+          <p>
+            Si dos personas tienen gustos similares, lo que escucha una puede sugerirse a la otra.
+          </p>
+          <p>
+            Este enfoque aprovecha la “sabiduría colectiva”, complementa al filtrado por contenido y enriquece el
+            descubrimiento musical.
+          </p>
+        </div>
+        <img class="piramide" src="images/estafa piramidal.png" alt="">
       </div>
-      <img src="images/blank.png" alt="" />
     </div>
+  </div>
 
-    <!--Nucleo 3 section 3-->
-    <div class="containerSection3">
-      <div class="textSection3">
-        <h3>
-          La aplicación clasifica las acciones del usuario en dos categorías:
-        </h3>
-        <p>
-          <strong>Feedback implícito:</strong> Aquellas acciones involuntarias
-          medidas previamente por la aplicación, como contenido escuchado,
-          tiempo de escucha, repeticiones, saltos, etc.
-        </p>
-      </div>
-      <img src="images/spotifyCHAD.png" alt="" />
-    </div>
 
-    <img src="images/spotify.png" alt="" />
-    <!--Nucleo 3 section 3-->
-    <div class="containerSection3">
-      <div class="textSection3">
-        <h3>Filtrado colaborativo</h3>
-        <p>
-          Luego de clasificar todos los datos de los usuarios y las canciones,
-          Spotify emplea un método de filtrado colaborativo que analiza las
-          relaciones entre las personas y sus hábitos de escucha: si dos
-          usuarios tienen gustos similares, las canciones preferidas de uno
-          pueden recomendarse al otro.                              Este método
-          aprovecha la “sabiduría colectiva” y permite descubrir música
-          diferente a lo que un perfil individual mostraría, complementando al
-          filtrado basado en contenido con un componente social que enriquece la
-          experiencia de descubrimiento musical.
-        </p>
-      </div>
-      <img src="images/blank.png" alt="" />
-    </div>
 
-    <!--     ZONA DE PRUEBAS NUCLEO 4
+
+
+  <!-- FIN ZONA CARRUSEL FUNCIONA -->
+
+
+  <br>
+  <br>
+
+
+
+  <!--     ZONA DE PRUEBAS NUCLEO 4
     ADVERTENCIA: HEHCO CON CHAT GPT -->
 
-    <!-- Nucleo 4 -->
-    <div class="titleContainer">
-      <div class="number">4</div>
-      <div class="titleSection">
-        Evolución del sistema de recomendación de Spotify
+
+  <!-- Nucleo 4 -->
+  <div class="titleContainer">
+    <div class="number">4</div>
+    <div class="titleSection">
+      Evolución del sistema de recomendación de Spotify
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="scroll-wrapper" id="scrollWrapper">
+    <div class="scroll-track">
+
+      <div class="lineaIMG">
+        <div class="año2015">
+          <h3>2015</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>Discover Weekly: <br> una playlist de 30 canciones personalizadas que <br> se actualiza automáticamente
+            cada lunes.</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2016">
+          <h3>2016</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>Fresh Finds: <br> una playlist automatizada que hallaba música emergente <br> utilizando blogs, reseñas y
+            fuentes de tendenci</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2016">
+          <h3>2016</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>Release Radar: <br> playlists personalizadas que combinan canciones <br> familiares con recomendaciones
+            nuevas.</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2019">
+          <h3>2019</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>Your Daily Drive: <br> que mezcla música con podcasts informativos <br>(como noticias) simulando un
+            programa de radio.</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2021">
+          <h3>2021</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>What 's New: <br> Una sección que recopila todos los nuevos lanzamientos y <br>episodios de los artistas y
+            podcasts que el usuario sigue.</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2021">
+          <h3>2021</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>City and Local Pulse charts: <br> Destinada a representar las canciones escuchadas <br> en las principales
+            ciudades del mundo</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2023">
+          <h3>2023</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>Discovery Mode: <br> Discovery Mode permite a los artistas que cumplen ciertos criterios <br> y tienen una
+            cuenta de Spotify for Artists enviar canciones que <br>califiquen para los servicios de promoción interna de
+            Spotify</p>
+        </div>
+      </div>
+
+      <div class="lineaIMG">
+        <div class="año2025">
+          <h3>2025</h3>
+        </div>
+        <img src="images/carrusel.png" alt="">
+        <div class="lineaTxT">
+          <p>AI Playlist: <br> La herramienta permite a los usuarios generar listas de reproducción <br> personalizadas
+            a partir de indicaciones de texto que describen géneros, <br> estados de ánimo, artistas, actividades o
+            ideas creativas como animales, <br>personajes de películas, colores o emojis. Los usuarios pueden
+            refinar<br>las listas con instrucciones adicionales, como "más animada"<br> o "canciones más alegres".</p>
+        </div>
       </div>
     </div>
+  </div>
+  <!-- Scrollbar personalizada -->
+  <div class="custom-scrollbar">
+    <div class="custom-thumb" id="customThumb"></div>
+  </div>
 
-    <div class="scroll-wrapper" id="scrollWrapper">
-      <div class="scroll-track">
-        <img src="images/carrusel.png" alt="onda" />
-        <img src="images/carrusel.png" alt="onda" />
-        <img src="images/carrusel.png" alt="onda" />
-        <img src="images/carrusel.png" alt="onda" />
-      </div>
-    </div>
 
-    <!-- Scrollbar personalizada -->
-    <div class="custom-scrollbar">
-      <div class="custom-thumb" id="customThumb"></div>
-    </div>
+  <!-- TERMINA ZONA DE PRUEBAS NUCLEO 4-->
 
-    <!-- TERMINA ZONA DE PRUEBAS NUCLEO 4-->
+  <!-- ZONA PRUEBA LINK -->
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+  <div class="titleContainer">
+  
+    <div class="titleSection">Fuent</div>
+  </div>
 
-    <!-- Music Display -->
-    <div class="musicDisplay">
-      <div class="musicPlayer">
-        <div class="songInfo">
-          <div class="albumCover"></div>
-          <div class="songDetails">
-            <h2>Comenzar</h2>
-            <p>Presiona play para comenzar</p>
+  <div class="timelineContainer1">
+    <div class="stepsContainer1">
+      <div class="stepWrapper1">
+        <div class="numeroContainer1" data-target="10">1</div>
+        <div class="info1" data-id="10">
+          <button class="closeBtn1">&times;</button>
+          <div class="links1">
+            <p><a
+                href="https://senalnews.com/es/digital/america-latina-es-la-region-con-mayor-numero-de-usuarios-activos-en-spotify">-
+                América Latina es la región con mayor número de usuarios activos en Spotify</a></p>
+            <p><a href="https://mercado.com.ar/marketing/argentina-entre-los-paises-que-mas-usan-spotify-en-la-region">-
+                Argentina, entre los países que más usan Spotify en la región</a></p>
+            <p><a
+                href="https://www.larepublica.co/internet-economy/asi-fue-como-spotify-logro-su-primer-ano-rentable-en-2024-tras-anos-de-crecimiento-4057790">-
+                Así fue como Spotify logró su primer año rentable en 2024 tras años de crecimiento</a></p>
+            <p><a
+                href="https://www.casinoguardian.co.uk/articles/these-are-the-most-streamed-songs-and-artists-on-spotify-in-every-country-around-the-world">-
+                The most streamed songs and artists on Spotify in every country around the world</a></p>
           </div>
         </div>
-        <div class="playButton">
-          <span class="prevIcon"><img src="images/prev.png" alt="" /></span>
-          <span class="playIcon"><img src="images/playIcon.png" alt="" /></span>
-          <span class="nextIcon"><img src="images/next.png" alt="" /></span>
-        </div>
-        <span class="menuIcon"
-          ><img src="images/menuHamburguesa.png" alt=""
-        /></span>
       </div>
-      <div class="progressBar">
-        <div class="progress"></div>
+      <div class="stepWrapper1">
+        <div class="numeroContainer1" data-target="20">2</div>
+        <div class="info1" data-id="20">
+          <button class="closeBtn1">&times;</button>
+          <p><a href="https://www.ibm.com/es-es/think/topics/deep-learning">- ¿Qué es el deep learning?</a></p>
+          <p><a href="https://eiposgrados.com/blog-python/spotify-machine-learning/">- ¿Cómo usa Spotify Machine
+              Learning?</a></p>
+
+        </div>
+      </div>
+      <div class="stepWrapper1">
+        <div class="numeroContainer1" data-target="30">3</div>
+        <div class="info1" data-id="30">
+          <button class="closeBtn1">&times;</button>
+          <p><a
+              href="https://medium.com/data-science/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748">-
+              Recommender Systems — A Complete Guide to Machine Learning Models</a></p>
+          <p><a href="https://www.wired.com/beyond-the-beyond/2017/10/musica-globalista-spotify-discovery-engine">-
+              Musica Globalista: Spotify Discovery engin</a></p>
+          <p><a href="https://www.techaheadcorp.com/blog/spotify-recommendation-system">- Discover How Spotify
+              Recommendation System works and maximises User Engagement</a></p>
+          <p><a href="https://arxiv.org/pdf/2312.10079">- Music Recommendation on Spotify using Deep Learning</a></p>
+          <p><a href="https://en.wikipedia.org/wiki/Recommender_system">- Wikipedia</a></p>
+        </div>
+      </div>
+      <div class="stepWrapper1">
+        <div class="numeroContainer1" data-target="40">4</div>
+        <div class="info1" data-id="40">
+          <button class="closeBtn1">&times;</button>
+          <p><a href="https://en.wikipedia.org/wiki/Spotify#Playlists_and_discovery">- Wikipedia</a></p>
+          <p><a
+              href="https://research.atspotify.com/2024/12/contextualized-recommendations-through-personalized-narratives-using-llms?utm_source=chatgpt.com">-
+              Contextualized Recommendations Through Personalized Narratives using LLMs</a></p>
+        </div>
       </div>
     </div>
-    <audio id="audioPlayer" src="images/f song jerk2.mp3"></audio>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--  FIN ZONDA DE PRUEBAS LINK -->
+
+
+  <!--VOLVER AL INICIO-->
+  <div class="replayContainer">
+    <h2>¿Disfrutaste la playlist informativa?</h2>
+    <div class="replayButton">
+      <img class="fotoVolver" src="images/fotoVolver.png" alt="foto de dua Lipa">
+      <button onclick="location.href='index.html'"><img src="images/replay.png" alt="botón de repetir"></button>
+    </div>
+    <h6>Presiona play para volver al principio</h6>
+  </div>
+
+  <!-- Music Display -->
+  <div class="musicDisplay">
+    <div class="musicPlayer">
+      <div class="songInfo">
+        <div class="albumCover"></div>
+        <div class="songDetails">
+          <h2>Comenzar</h2>
+          <p>Presiona play para comenzar</p>
+        </div>
+      </div>
+      <div class="playButton">
+        <span class="prevIcon"><img src="images/prev.png" alt="" /></span>
+        <span class="playIcon"><img src="images/playIcon2.png" alt="" /></span>
+        <span class="nextIcon"><img src="images/next.png" alt="" /></span>
+      </div>
+      <!-- Botón de menú hamburguesa -->
+      <button id="openModalBtn" class="menu-button">
+        <img src="images/menuHamburguesa.png" alt="Abrir menú" />
+      </button>
+    </div>
+    <div class="progressBar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <!-- Botón de cerrar -->
+      <button id="closeModalBtn" class="close-btn">
+        <img src="images/Close.png" alt="Cerrar" />
+      </button>
+
+      <!-- Contenido del menú -->
+      <ul class="menu-list">
+        <li>Sistemas de recomendación</li>
+        <li>Machine Learning</li>
+        <li>Datos que utiliza Spotify</li>
+        <li>Evolución del sistema de recomendación de Spotify</li>
+      </ul>
+    </div>
+  </div>
+
+  <audio id="audioPlayer" src="images/f song jerk2.mp3"></audio>
+  <script src="script.js"></script>
+  <script src="modalScript.js"></script>
+</body>
+
 </html>

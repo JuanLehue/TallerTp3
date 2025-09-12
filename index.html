@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,11 +15,13 @@
         <img src="images/FondoGrad.png" alt="">
     </div>
     <div class="cardHome">
+        <img class="logoSpotify" src="images/logoSpotify.png" alt="logo de Spotify">
         <div class="textHome">
             <h1>¿Por qué Spotify te conoce tan bien?</h1>
             <h4>Del algoritmo a tu pantalla</h4>
         </div>
-        <img class="logoSpotify" src="images/logoSpotify.png" alt="logo de Spotify">
+
+
     </div>
     <div class="musicDisplay">
         <div class="musicPlayer">
@@ -30,14 +33,39 @@
                 </div>
             </div>
             <div class="playButton">
-                <a class="playIcon" href="main.html"><img src="images/playIcon.png" alt=""></a>
+                <a class="playIcon" href="main.html" id="playInicio"><img src="images/playIcon2.png" alt=""></a>
             </div>
-            <span class="menuIcon"><img src="images/menuHamburguesa.png" alt=""></span>
+            <!-- Botón de menú hamburguesa -->
+            <button id="openModalBtn" class="menu-button">
+                <img src="images/menuHamburguesa.png" alt="Abrir menú" />
+            </button>
         </div>
         <div class="progressBar">
             <div class="progress"></div>
         </div>
     </div>
+
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <!-- Botón de cerrar -->
+            <button id="closeModalBtn" class="close-btn">
+                <img src="images/Close.png" alt="Cerrar" />
+            </button>
+
+            <!-- Contenido del menú -->
+            <ul class="menu-list">
+                <li>Sistemas de recomendación</li>
+                <li>Machine Learning</li>
+                <li>Datos que utiliza Spotify</li>
+                <li>Evolución del sistema de recomendación de Spotify</li>
+            </ul>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+<script src="modalScript.js"></script>
 </body>
 
 </html>

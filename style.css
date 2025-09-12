@@ -19,30 +19,33 @@ body{
 
 .background img{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    width: 100vw;       /* 100% del ancho de la pantalla */
+    height: 100vh;      /* 100% del alto de la pantalla */
+    object-fit: cover;  
+    object-position: center bottom;
     z-index: -1;
 }
 
 .cardHome{
     background: transparent;
     border-radius: 25px;
-    border: 2px solid #ffffff;
-    padding: 20px 40px;
     display: flex;
+    flex-direction: column;      /* Cambia de fila a columna */
+    align-items: center;         /* Centra horizontalmente */
+    justify-content: center; 
+    padding: 20px 40px;  
     align-items: center;
-    justify-content: space-between;
     width: 90%; 
-    margin-bottom: 40px;
     overflow: hidden;
+    margin-bottom: 70px;
 }
 
 .textHome{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;         
     gap: 10px;
 }
 
@@ -58,8 +61,9 @@ body{
 }
 
 .logoSpotify{
-    width: 180px;
+    width: 150px;
     height: auto;
+    margin-bottom: 70px;
 }
 
 /* Music display section */
@@ -139,7 +143,6 @@ body{
 .playIcon img{
     width: 35px;
     height: 35px;
-    padding-left: 5px;
 }
 
 /* Progress bar below music display */
@@ -159,9 +162,96 @@ body{
     border-radius: 3px;
     transition: width 0.3s;
 }
-.menuIcon {
-    margin-left: 20px;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
+.menu-button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 50px;   
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);   /* efecto blur */
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: flex-start; /* que el contenido se pegue al lado izquierdo */
+  align-items: stretch;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal content: fondo transparente para ver imagen */
+.modal-content {
+  width: 100%;         /* ocupa todo el ancho */
+  height: 100%;        /* ocupa toda la altura */
+  background: transparent;
+  color: #fff;
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 0.4s ease;
+  padding: 80px 40px 40px 40px;  /* espacio para el botón cerrar */
+  box-sizing: border-box;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-overlay.show .modal-content {
+  transform: translateX(0);
+}
+
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+  text-align: center;
+}
+
+.menu-list li {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.menu-list li:hover {
+  font-weight: 600;
 }

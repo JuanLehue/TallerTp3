@@ -21,11 +21,13 @@ body {
   scroll-snap-type: x mandatory;
   width: 100%;
   gap: 50px;
-  scrollbar-width: none; /* Firefox: oculta la scrollbar */
+  scrollbar-width: none;
+  /* Firefox: oculta la scrollbar */
 }
 
 .scrollContainer::-webkit-scrollbar {
-  height: 10px; /* ancho del scrollbar */
+  height: 10px;
+  /* ancho del scrollbar */
 }
 
 .scrollContainer::-webkit-scrollbar-thumb {
@@ -46,10 +48,14 @@ body {
 
 .titleContainer {
   display: flex;
-  align-items: center; /* centra verticalmente */
-  justify-content: center; /* centra todo en la pantalla */
-  gap: 20px; /* espacio entre el círculo y el texto */
+  align-items: center;
+  /* centra verticalmente */
+  justify-content: center;
+  /* centra todo en la pantalla */
+  gap: 20px;
+  /* espacio entre el círculo y el texto */
   margin-top: 60px;
+  cursor: pointer;
 }
 
 .number {
@@ -63,8 +69,10 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  flex-shrink: 0; /* evita que se achique */
-  position: static; /* 👈 importante: ya no lo muevas con relative */
+  flex-shrink: 0;
+  /* evita que se achique */
+  position: static;
+  /* 👈 importante: ya no lo muevas con relative */
 }
 
 .titleSection {
@@ -73,6 +81,9 @@ body {
   line-height: 1.2;
   text-align: left;
 }
+
+
+
 
 .cardsContainer {
   display: flex;
@@ -117,6 +128,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .card img:hover {
@@ -138,18 +150,20 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100%;
-  gap: 50px;
-  scrollbar-width: none; /* Firefox: oculta la scrollbar */
+  scrollbar-width: none;
+  /* Firefox: oculta la scrollbar */
 }
 
 .scrollContainer2::-webkit-scrollbar {
-  height: 10px; /* ancho del scrollbar */
+  height: 10px;
+  /* ancho del scrollbar */
 }
 
 .scrollContainer2::-webkit-scrollbar-thumb {
   background: #1bd760;
   border-radius: 5px;
 }
+
 .containerSection2 {
   flex: 0 0 100%;
   scroll-snap-align: start;
@@ -158,7 +172,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 90px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 200px;
 }
 
@@ -231,10 +245,19 @@ body {
 /* Subtexto */
 .graficSection2 h5 {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.4;
   max-width: 280px;
 }
+
+.textBox {
+  background-color: #fff;
+  color: #000;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+
 
 .graficSection3 {
   flex: 1;
@@ -245,7 +268,7 @@ body {
   height: 430px;
 }
 
-.graficSection3 > div {
+.graficSection3>div {
   border: 2px solid #1bd760;
   border-radius: 14px;
   padding: 15px;
@@ -282,6 +305,80 @@ body {
   height: 70px;
 }
 
+/* Imagen compartida */
+.containerSplitSection2 {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.textSplitSection2 {
+  flex: 1;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  width: 580px;
+}
+
+.textSplitSection2 h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.textSplitSection2 p {
+  font-size: 24px;
+  font-weight: 200;
+  inline-size: 1.5;
+}
+
+.textSRight {
+  padding-right: 160px;
+}
+
+.textSLeft {
+  padding-left: 160px;
+}
+
+/* Mitades de la imagen */
+.halfImage {
+  position: relative;
+  flex: 1;
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.halfImage img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: auto;
+}
+
+/* Ajustes para cada mitad */
+.halfImage.left {
+  left: -28.75%;
+  clip-path: inset(0 -100% 0 60%);
+  /* Muestra solo la mitad izquierda */
+}
+
+.halfImage.right {
+  left: 11.7%;
+  clip-path: inset(0 28% 0 0);
+  /* Muestra solo la mitad derecha */
+}
+
 /*LINEA DEL TIEMPO*/
 .timelineContainer {
   display: flex;
@@ -291,13 +388,16 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   position: relative;
-  overflow: visible; /* importante para que tooltips no se corten */
+  overflow: visible;
+  /* importante para que tooltips no se corten */
 }
 
 .timeline {
   position: relative;
-  width: 100%; /* ocupa todo el ancho de la sección */
-  max-width: 1200px; /* opcional, limita tamaño máximo */
+  width: 100%;
+  /* ocupa todo el ancho de la sección */
+  max-width: 1200px;
+  /* opcional, limita tamaño máximo */
 }
 
 /* Línea base */
@@ -326,14 +426,17 @@ body {
 .stepsContainer {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* ocupa el ancho de la sección */
+  width: 100%;
+  /* ocupa el ancho de la sección */
 }
 
 .steps {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* los pasos se reparten equitativamente */
-  gap: 0; /* no hace falta scroll interno */
+  width: 100%;
+  /* los pasos se reparten equitativamente */
+  gap: 0;
+  /* no hace falta scroll interno */
 }
 
 .step {
@@ -410,7 +513,8 @@ body {
   background: #fff;
   color: #000;
   text-align: center;
-  transition: left 0.5s ease; /* animar solo la posición horizontal */
+  transition: left 0.5s ease;
+  /* animar solo la posición horizontal */
 }
 
 .info.active {
@@ -420,12 +524,15 @@ body {
 .info::before {
   content: "";
   position: absolute;
-  bottom: 100%; /* justo arriba del cuadro */
+  bottom: 100%;
+  /* justo arriba del cuadro */
   left: 50%;
   transform: translateX(-50%);
-  border-width: 10px; /* tamaño de la flecha */
+  border-width: 10px;
+  /* tamaño de la flecha */
   border-style: solid;
-  border-color: transparent transparent #fff transparent; /* solo la punta inferior blanca */
+  border-color: transparent transparent #fff transparent;
+  /* solo la punta inferior blanca */
 }
 
 /* section 3 styles */
@@ -433,7 +540,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 75%;
+  width: 80%;
   margin-top: 300px;
   margin-bottom: 300px;
 }
@@ -456,6 +563,17 @@ body {
   font-size: 24px;
   font-weight: 200;
   inline-size: 1.5;
+  padding-bottom: 20px;
+}
+
+.imagenS1 {
+  width: 400px !important;
+  height: auto;
+}
+
+.piramide{
+  width: 400px !important;
+  height: auto;
 }
 
 /* BARRA SCROL PRUEBAS*/
@@ -466,11 +584,13 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  scrollbar-width: none; /* Firefox: oculta la scrollbar */
+  scrollbar-width: none;
+  /* Firefox: oculta la scrollbar */
 }
 
 .scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome/Safari: oculta la scrollbar */
+  display: none;
+  /* Chrome/Safari: oculta la scrollbar */
 }
 
 .scroll-track {
@@ -484,16 +604,19 @@ body {
 
 /* Scrollbar personalizada */
 .custom-scrollbar {
-  width: 400px; /* 👈 el ancho de la barra */
+  width: 400px;
+  /* 👈 el ancho de la barra */
   height: 12px;
   background: #111;
   border-radius: 6px;
-  margin: 30px auto; /* 👈 centrada horizontalmente */
+  margin: 30px auto;
+  /* 👈 centrada horizontalmente */
   position: relative;
 }
 
 .custom-thumb {
-  width: 80px; /* tamaño del pulgar */
+  width: 80px;
+  /* tamaño del pulgar */
   height: 100%;
   background: #1bd760;
   border-radius: 6px;
@@ -503,6 +626,486 @@ body {
 }
 
 /* TERMINA ZONA DE PRUEBAS */
+
+
+/*SECCION 3*/
+/* section 3 styles */
+/* Carrusel principal */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 640px;
+  gap: 30px;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.media-container {
+  background-color: transparent;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.media-image,
+.media-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.media-video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== MINI-CARRUSEL SPOTIFY STYLE ===== */
+.mini-carousel {
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
+  overflow: hidden;
+  height: 100%;
+  padding-bottom: 5px;
+}
+
+.mini-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.mini-item {
+  flex: 0 0 100%;
+  color: white;
+
+}
+
+.mini-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.mini-item h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.mini-item p {
+  font-size: 14px;
+  color: #b3b3b3;
+  /* gris Spotify */
+  margin: 0 0 15px;
+}
+
+/* Controles estilo Spotify */
+.mini-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mini-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+
+.mini-controls button img {
+  width: auto;
+  height: 25px;
+}
+
+/* Botón central estilo "Skip" Spotify */
+.mini-skip img {
+  height: 50px !important;
+  padding: 0px;
+}
+
+.mini-skip img:hover {
+  transform: scale(1.05);
+}
+
+.mini-controls button:hover {
+  transform: scale(1.1);
+}
+
+
+.custom-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+/* Cada slide ocupa toda la pantalla (o contenedor) */
+.carousel-slide {
+
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 40px;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+/* Cards container dentro del primer slide */
+.cardsContainer2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas individuales */
+.card2 {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card2:hover {
+  transform: scale(1.05);
+}
+
+.card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenido de cada slide */
+.containerSection3 {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.containerSection3 img {
+  width: 300px;
+  height: auto;
+}
+
+.textSection3 {
+  flex: 1;
+  max-width: 600px;
+}
+
+.textSection3 h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.textSection3 p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.custom-carousel {
+  -ms-overflow-style: none;
+  /* IE y Edge antiguos */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.custom-carousel::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari y Opera */
+}
+
+/* .back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1DB954; /* color tipo Spotify 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #159c44;
+} */
+/* TERMINA ZONA DE PRUEBAS */
+
+
+
+/* BARRA SCROL PRUEBAS TAMBIEN FUNVIONA*/
+
+.scroll-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+  /* Firefox: oculta la scrollbar */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari: oculta la scrollbar */
+}
+
+.scroll-track {
+  display: flex;
+}
+
+.scroll-track img {
+  height: 200px;
+  flex-shrink: 0;
+}
+
+/* Scrollbar personalizada */
+.custom-scrollbar {
+  width: 400px;
+  /* 👈 el ancho de la barra */
+  height: 12px;
+  background: #111;
+  border-radius: 6px;
+  margin: 30px auto;
+  /* 👈 centrada horizontalmente */
+  position: relative;
+}
+
+.custom-thumb {
+  width: 80px;
+  /* tamaño del pulgar */
+  height: 100%;
+  background: #1BD760;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  cursor: grab;
+}
+
+.lineaTxT {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.año2015 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.año2016 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.año2019 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.año2021 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.año2023 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.año2025 {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+
+
+/* ZONA LINKS */
+
+
+.timelineContainer1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  min-height: 460px;
+  height: auto;
+}
+
+.stepsContainer1 {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  /* más separación entre círculos */
+}
+
+.stepWrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.numeroContainer1 {
+  width: 200px;
+  /* más grande */
+  height: 200px;
+  /* más grande */
+  border-radius: 50%;
+  background: #1BD760;
+  color: #000;
+  font-weight: bold;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.numeroContainer1:hover {
+  background: #1bd760;
+  box-shadow: 0 4px 15px rgba(27, 215, 96, 0.7); /* x, y, blur, color */
+}
+
+
+.info1 {
+  display: none;
+  /* oculto por defecto */
+  margin-top: 20px;
+  /* espacio debajo del círculo */
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  text-align: center;
+  width: 350px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  color: #000;
+  font-size: 16px;  
+}
+
+.closeBtn1 {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.info1 p{
+  margin-bottom: 10px;
+}
+
+.info1 a {
+  color: #000;           /* color negro */
+}
+
+.info1 a:visited {
+  color: #000;           /* mantiene negro aunque ya haya sido clickeado */
+}
+
+
+.info1 a:active {
+  color: #000;           /* mientras se hace click */
+}
+
+ .info1.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+
+
+
+
+
+/* FIN ZONA LINKS */
+
+/*VOLVER AL INCIO*/
+.replayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  gap: 15px;
+  position: relative;
+  height: 75vh;
+  max-width: 580px;
+}
+
+.replayContainer h2 {
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.replayContainer h6 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.fotoVolver {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.replayButton button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+
+}
+
+.replayButton button:hover {
+  transform: scale(1.1);
+}
+
+/* FIN VOLVER AL INCIO*/
+
 
 /* Music display section */
 .musicDisplay {
@@ -517,6 +1120,7 @@ body {
   margin-top: 40px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
   position: fixed;
+  transform: translateX(0%);
   bottom: 30px;
   gap: 20px;
 }
@@ -542,16 +1146,36 @@ body {
   justify-content: center;
   margin-right: 30px;
 }
+
 .songInfo h2 {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
 }
+
 .songInfo p {
   font-size: 14px;
   color: #b3b3b3;
   margin: 0;
 }
+
+.menu-button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 50px;   
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .playButton {
   width: 80px;
   height: 80px;
@@ -599,7 +1223,6 @@ body {
 .playIcon img {
   width: 35px;
   height: 35px;
-  padding-left: 5px;
 }
 
 /* Progress bar below music display */
@@ -612,16 +1235,98 @@ body {
   position: static;
   display: block;
 }
+
 .progress {
   height: 100%;
-  width: 0%; /* Change with JS for progress */
+  width: 0%;
+  /* Change with JS for progress */
   background: #1ed760;
   border-radius: 3px;
   transition: width 0.3s;
 }
+
 .menuIcon {
   margin-left: 20px;
   color: #fff;
   font-size: 28px;
   cursor: pointer;
+}
+
+/* MODAL STYLES */
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);   /* efecto blur */
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: flex-start; /* que el contenido se pegue al lado izquierdo */
+  align-items: stretch;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal content: fondo transparente para ver imagen */
+.modal-content {
+  width: 100%;         /* ocupa todo el ancho */
+  height: 100%;        /* ocupa toda la altura */
+  background: transparent;
+  color: #fff;
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 0.4s ease;
+  padding: 80px 40px 40px 40px;  /* espacio para el botón cerrar */
+  box-sizing: border-box;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-overlay.show .modal-content {
+  transform: translateX(0);
+}
+
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+  text-align: center;
+}
+
+.menu-list li {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.menu-list li:hover {
+  font-weight: 600;
 }
